@@ -18,7 +18,12 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (firstname.trim() && lastname.trim()) {
     setSubmittedName(`${firstname} ${lastname}`);
+    }else{
+      setSubmittedName("");
+      alert("Please fill in both first and last name.");
+    }
   };
 
   return (
